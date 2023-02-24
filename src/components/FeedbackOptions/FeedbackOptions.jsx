@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ButtonBox } from './FeedBeckOptions.Styled';
+import { ButtonBox, Button } from './FeedBeckOptions.Styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const feedBeckTypes = Object.keys(options);
@@ -7,13 +7,13 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     <ButtonBox>
       {feedBeckTypes.map((feedBeckType, index) => {
         return (
-          <button
+          <Button
             key={index}
             type="button"
             onClick={() => onLeaveFeedback(feedBeckType)}
           >
             {feedBeckType}
-          </button>
+          </Button>
         );
       })}
     </ButtonBox>
